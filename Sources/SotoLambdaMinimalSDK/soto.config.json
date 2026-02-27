@@ -1,0 +1,7 @@
+{
+    "services": { 
+        "lambda": {
+            "operations": ["invoke", "listFunctions"]
+        }
+    }
+}
