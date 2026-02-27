@@ -7,10 +7,8 @@ let package = Package(
     name: "SotoLambdaMinimalSDK",
     platforms: [ .macOS(.v15) ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "SotoLambdaMinimalSDK",
-            type: .static,
             targets: ["SotoLambdaMinimalSDK"]
         ),
     ],
@@ -19,8 +17,6 @@ let package = Package(
         .package(url: "https://github.com/soto-project/soto-core.git", from: "7.12.0"),        
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "SotoLambdaMinimalSDK",
             dependencies: [.product(name: "SotoCore", package: "soto-core")],
